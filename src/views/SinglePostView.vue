@@ -32,7 +32,9 @@ export default {
         if (response.data.success) {
           this.post = response.data.result
         } else {
-          // redirect to a 404 page
+          this.$router.push({
+            name: 'NotFound',
+          })
         }
       })
       .catch(error => {
@@ -100,8 +102,8 @@ export default {
 
 
 <style>
-  .jumbotron {
-    height: 300px;
-    background-attachment: fixed;  
-    }
+.jumbotron {
+  height: 300px;
+  background-attachment: fixed;
+}
 </style>
